@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Merienda", "Dreaming Outloud Pro", sans-serif;
+}
+/*header*/
+
+.header {
+  height: 700px;
+  width: 100%;
+  background-image: url(pics/cherry2.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.otsikko {
+  color: #fff;
+  width: 450px;
+  background-color: rgba(106, 49, 70, 0.8);
+  position: absolute;
+  padding: 10px 30px;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  text-shadow: 2px 2px #000;
+  text-align: center;
+}
+nav {
+  position: absolute;
+  align-items: center;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-links {
+  text-shadow: 1px 1px #000;
+}
+.nav-links ul {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-links ul li {
+  list-style: none;
+  width: 150px;
+  padding: 8px 8px;
+  position: relative;
+  text-align: center;
+  background-color: rgba(106, 49, 70, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.nav-links ul li:hover {
+  background-color: #6d2e46;
+}
+.nav-links ul li.valittu {
+  background-color: #4f2133;
+}
+
+/*Content*/
+
+.content {
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+  background: linear-gradient(#ffdbe1, #d5b9b2);
+  color: #18020c;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.jutut {
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+}
+.jutut h2 {
+  display: inline-block;
+  background-color: #f79046;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 3px 3px #503843;
+}
+.jutut p {
+  margin: 20px 0 20px;
+}
+
+/* CTA*/
+.nro {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #6d2e46;
+  color: #fff;
+  padding: 15px 20px;
+  position: relative;
+  cursor: pointer;
+}
+.nro:hover {
+  background: rgba(106, 49, 70, 0.8);
+}
+#kuva1 img {
+  width: 400px;
+  border-radius: 20px;
+  margin-left: 5%;
+  position: relative;
+  overflow: hidden;
+}
+#kuva2 img {
+  width: 150px;
+}
+
+/*content tiedot sivulla*/
+
+#aukiolot {
+  background: rgba(106, 49, 70, 0.8);
+  color: #fff;
+  width: 50px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 20px 0px 20px;
+}
+#kartta {
+  background: rgba(106, 49, 70, 0.8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 20px 0px 20px;
+}
+
+/*menu*/
+
+h2 {
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+.menu {
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+  background: linear-gradient(#ffdbe1, #d5b9b2);
+  color: #18020c;
+}
+.sushit {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 30px;
+  justify-content: center;
+  text-align: center;
+}
+.sushit div {
+  background: rgba(106, 49, 70, 0.8);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.sushit img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+.sushit h4 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.sushit p {
+  font-size: 14px;
+}
+h3 {
+  font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.menu a {
+  margin-bottom: 100px;
+}
+
+/*footer*/
+
+.footer {
+  background-color: #503843;
+  color: #fff;
+  padding: 50px 20px 10px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  text-align: center;
+}
+.footer .aukioloajat {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+  color: #18020c;
+  background-color: #d5b9b2;
+  padding: 30px 40px;
+  margin: auto;
+}
+.footer .aukioloajat h4 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.footer .icon {
+  width: 25px;
+  background-color: #d5b9b2;
+  border-radius: 40%;
+  padding: 2px;
+  margin-top: 20px;
+}
+.footer .osote {
+  grid-column: 3;
+  grid-row: 1;
+  text-align: center;
+}
+
+.footer .kuva {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+}
+
+.footer img {
+  width: 300px;
+  height: auto;
+}
+
+/* mid-koko*/
+
+@media (max-width: 1100px) {
+  #kuva2 {
+    display: none;
+  }
+  .jutut {
+    flex-basis: 48%;
+  }
+  .sushit {
+    grid-template-columns: repeat(2, auto);
+  }
+  #aukiolot {
+    display: none;
+  }
+}
+
+/*Puhelinkoko*/
+
+@media (max-width: 768px) {
+  .header {
+    height: 500px;
+  }
+  .otsikko {
+    width: 300px;
+  }
+  .otsikko h1 {
+    font-size: 50px;
+  }
+  .nav-links ul li {
+    width: 100px;
+  }
+  .nav-links ul li a {
+    font-size: 14px;
+  }
+  .row {
+    flex-direction: column;
+  }
+  #kuva1 {
+    order: 2;
+  }
+  #kuva1 img {
+    width: 350px;
+    margin-left: 0;
+  }
+  .sushit {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .footer .aukioloajat {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .footer .osote {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .footer .kuva {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
