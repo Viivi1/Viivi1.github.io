@@ -91,12 +91,13 @@ nav {
   padding: 20px 12px;
   box-sizing: border-box;
 }
-.jutut h5 {
+.jutut #halpa {
   display: inline-block;
   background-color: #f79046;
   font-size: 30px;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: -10px;
   border-radius: 50%;
   box-shadow: 3px 3px #503843;
 }
