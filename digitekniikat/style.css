@@ -1,17 +1,82 @@
 body {
-    font-family: Arial, sans-serif;
-  }
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background-color: rgba(0,0,0,0.5);
-    padding: 1rem;
-    border-radius: 10px;
-  }
-  .carousel-item img {
-    height: 400px;
-    object-fit: cover;
-  }
+  font-family: Arial, sans-serif;
+}
+
+/* Navigaatio */
+.logo {
+  width: 75px;
+  margin-right: 10px;
+}
+
+.brand-text {
+  font-size: 1.2rem;
+}
+
+/* Otsikko-osio */
+h1 {
+  font-size: 2.5rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: #6c757d;
+}
+
+/* Kortit */
+.card {
+  border: none; /* Poistaa korttien reunaviivan */
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03); /* Cool suurennus efekti */
+}
+/* Karuselli-container */
+.carousel-container {
+  position: relative;
+  text-align: center;
+}
+
+/* Otsikko pysyy paikoillaan */
+.carousel-title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3.5rem; /* Suurempi otsikko */
+  font-weight: bold;
+  color: white;
+  z-index: 3; /* Nostaa otsikon overlayn päälle */
+}
+
+/* Karuselli */
+.carousel-img {
+  height: 80vh;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+/* Painikkeet */
+.carousel-caption {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-primary {
+  background-color: #ffc107;
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.btn-primary:hover {
+  background-color: #ff9800;
+  color: white;
+}
+
+/* Footer */
+.footer {
+  padding: 15px;
+}
