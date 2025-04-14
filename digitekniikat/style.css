@@ -43,10 +43,10 @@ h1 {
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 3.5rem; /* Suurempi otsikko */
+  font-size: 3.5rem;
   font-weight: bold;
   color: white;
-  z-index: 3; /* Nostaa otsikon overlayn päälle */
+  z-index: 3;
 }
 
 /* Karuselli */
@@ -77,6 +77,23 @@ h1 {
 }
 
 /* Footer */
-.footer {
+.footer-kuva {
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+
+.footer-kuva img {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* boxit */
+.route-info {
+  background-color: #f8f9fa;
+  border-left: 4px solid #ffc107;
   padding: 15px;
+  border-radius: 8px;
+  font-size: 0.95rem;
 }
