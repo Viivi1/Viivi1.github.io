@@ -1,0 +1,99 @@
+body {
+  font-family: "Sansation", Arial, sans-serif;
+}
+
+/* Navigaatio */
+.logo {
+  width: 75px;
+  margin-right: 10px;
+}
+
+.brand-text {
+  font-size: 1.2rem;
+}
+
+/* Otsikko-osio */
+h1 {
+  font-size: 2.5rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: #6c757d;
+}
+
+/* Kortit */
+.card {
+  border: none; /* Poistaa korttien reunaviivan */
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03); /* Cool suurennus efekti */
+}
+/* Karuselli-container */
+.carousel-container {
+  position: relative;
+  text-align: center;
+}
+
+/* Otsikko pysyy paikoillaan */
+.carousel-title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  z-index: 3;
+}
+
+/* Karuselli */
+.carousel-img {
+  height: 80vh;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+/* Painikkeet */
+.carousel-caption {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-primary {
+  background-color: #ffc107;
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.btn-primary:hover {
+  background-color: #ff9800;
+  color: white;
+}
+
+/* Footer */
+.footer-kuva {
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+
+.footer-kuva img {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* boxit */
+.route-info {
+  background-color: #f8f9fa;
+  border-left: 4px solid #ffc107;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
