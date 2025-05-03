@@ -38,10 +38,10 @@
                 <a class="nav-link" href="tokasivu.html">Sivu 2</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="pokemon.html">Pokemon</a>
+                <a class="nav-link" href="pokemon.html">Pokemon</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="tokapokemon.html">Pokemon 2</a>
+                <a class="nav-link active" href="tokapokemon.html">Pokemon 2</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="vinkit.html">Tehtävä 3</a>
@@ -59,8 +59,10 @@
 
         <div id="nimi">Kirjoita laatikkoon Pokemonin nimi</div>
         <p id="kuva2"></p>
+        <div id="kaanna-nappi"></div>
         </p>
         <p>
+        <div id="tiedot"></div>
         <h5>Pokemonien nimiä</h5>
         <div>Jos et muista Pokemoneja ulkoa, tässä joitakin
         <br><br>
@@ -104,12 +106,26 @@
 
                 function pokekuva(obj) {
                 //Tallennetaan muuttujan linkki josta löytty Poken kuva    
-                    let pokeurl = obj.sprites.front_default;
-                //Kirjoitetaan kuva, ja nimi sivulla sekä tyhyjennetään hakukenttä    
-                    document.getElementById("kuva2").innerHTML = "<img src=" + pokeurl + ">";
+                    let etuPoke = obj.sprites.front_default;
+                    let takaPoke = obj.sprites.back_default;
+
+                //Pokemonin tietoja 
+                    let id = obj.id
+                    let pituus = obj.height
+                    let paino = obj.weight
+
+                //Kirjoitetaan kuva, ja nimi sivulla sekä tyhyjennetään hakukenttä
                     document.getElementById("nimi").innerHTML = "<b>" + name + "</b>";
+                    document.getElementById("kuva2").innerHTML = "<img id='pokeKuva' src=" + etuPoke + ">";
+                    document.getElementById("tiedot").innerHTML = "<p>ID: " + id + "<p>Pituus: " + pituus + "</p><p>Paino: " + paino + "</p>"  
+                    document.getElementById("kaanna-nappi").innerHTML = "<button onclick='kaanna(\"" + takaPoke +"\")'>Käännä</button>";
+
+                    //tyhjennys
                     document.getElementById("pokemonName").value = "";
                 }
+        }
+        function kaanna(takaPoke) {
+                    document.getElementById("pokeKuva").src = takaPoke;
             }
         </script>
     </main>

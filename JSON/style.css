@@ -1,7 +1,9 @@
 body {
-  font-family: "Sansation", Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
-
+img.etusivu {
+  width: 100%;
+}
 /* Navigaatio */
 .logo {
   width: 75px;
@@ -22,21 +24,6 @@ h1 {
   color: #6c757d;
 }
 
-/* Kortit */
-.card {
-  border: none; /* Poistaa korttien reunaviivan */
-  transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-  transform: scale(1.03); /* Cool suurennus efekti */
-}
-/* Karuselli-container */
-.carousel-container {
-  position: relative;
-  text-align: center;
-}
-
 /* Otsikko pysyy paikoillaan */
 .carousel-title {
   position: absolute;
@@ -47,13 +34,6 @@ h1 {
   font-weight: bold;
   color: white;
   z-index: 3;
-}
-
-/* Karuselli */
-.carousel-img {
-  height: 80vh;
-  object-fit: cover;
-  filter: brightness(50%);
 }
 
 /* Painikkeet */
@@ -80,20 +60,4 @@ h1 {
 .footer-kuva {
   margin-bottom: 0;
   margin-top: 15px;
-}
-
-.footer-kuva img {
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* boxit */
-.route-info {
-  background-color: #f8f9fa;
-  border-left: 4px solid #ffc107;
-  padding: 15px;
-  border-radius: 8px;
-  font-size: 0.95rem;
 }

@@ -16,6 +16,7 @@
     <!-- Yläpalkki -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
+        <!-- Logo -->
         <a class="navbar-brand" href="index.html"> JSON tehtävät </a>
         <!-- Hamppari -->
         <button
@@ -30,10 +31,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Etusivu</a>
+              <a class="nav-link" href="index.html">Etusivu</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="tokasivu.html">Sivu 2</a>
+              <a class="nav-link active" href="tokasivu.html">Sivu 2</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="pokemon.html">Pokemon</a>
@@ -49,9 +50,9 @@
       </div>
     </nav>
     <main>
-      <div id="vastaus" class="container text-center mt-4 p-3"></div>
+      <div id="vastaus" class="container mt-4 p-3"></div>
       <script>
-        fetch("tietue.JSON")
+        fetch("digitekniikat.JSON")
           // Muunnetaan vastaus JSON muotoon
           .then(function (response) {
             return response.json();
@@ -70,40 +71,11 @@
 
         function kerro(obj) {
           let tiedot =
-            "<h1>" +
-            obj.otsikko +
-            "</h1><br>" +
-            obj.kuvaus +
-            "<br><hr>" +
-            "<p><img class= 'etusivu' src='" +
-            obj.kuva +
-            "'></p>" +
-            "<h3>" +
-            "Opintojakso" +
-            "</h3>" +
-            "Nimi: " +
-            obj.opintojakso.nimi +
-            "<br>" +
-            "Tunnus: " +
-            obj.opintojakso.tunnus +
-            "<br>" +
-            "Opintopisteet: " +
-            obj.opintojakso.opintopisteet +
-            "<br>";
-
-          //For silmukka, joka luo myös linkit sivulle
-          for (var i = 0; i < obj.tekniikat.length; i++) {
-            tiedot += "<b>Aihe: " + obj.tekniikat[i].aihe + "</b>";
-
-            tiedot +=
-              " <a href=" +
-              obj.tekniikat[i].linkki +
-              ">" +
-              obj.tekniikat[i].linkki +
-              "</a>" +
-              "<br>";
-          }
-          tiedot += "</p>";
+        "<h1>" + obj.otsikko + "</h1><br>" + 
+        obj.osallistujamaara + "<br>" +
+          obj.nimet + "<br>" +
+          obj.ajankohta + "<br>" +
+          obj.kesto + "<br>" + "<p><img src='" + obj.kuva + "'></p>"
           document.getElementById("vastaus").innerHTML = tiedot;
         }
       </script>
