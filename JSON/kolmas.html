@@ -1,90 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sää Sivu</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Yläpalkki -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"> JSON tehtävät </a>
-            <!-- Hamppari -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Navi linkit -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Etusivu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tokasivu.html">Sivu 2</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pokemon.html">Pokemon</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tokapokemon.html">Pokemon 2</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="kolmas.html">Tehtävä 3</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"> JSON tehtävät </a>
+        <!-- Hamppari -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navi linkit -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Etusivu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tokasivu.html">Sivu 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pokemon.html">Pokemon</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tokapokemon.html">Pokemon 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="kolmas.html">Tehtävä 3</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
     <main>
-      <div id="keli" class="container mt-4 p-2">     
-      <div id="vastaus"></div>
-      <img id="weather-icon" alt="Sääikoni">
-    </div>
+      <div id="keli" class="container mt-4 p-2">
 
-        <script>
-            function keli() {
-                fetch(`https://api.openweathermap.org/data/2.5/weather?id=658225&appid=665ecd56dfc08dbb50feb8b8f5034e28&lang=fi&units=metric`)
+        <div id="vastaus"></div>
+        <img id="weather-icon" alt="Sääikoni" />
+      </div>
 
-                    // JSON
-                    .then(function (response) {
-                        return response.json();
-                    })
-                    .then(function(data){
-                      naytaKeli(data);
-                    })
+      <script>
+        function keli() {
+          fetch(
+            `https://api.openweathermap.org/data/2.5/weather?id=658225&appid=665ecd56dfc08dbb50feb8b8f5034e28&lang=fi&units=metric`
+          )
+            // JSON
+            .then(function (response) {
+              return response.json();
+            })
+            .then(function (data) {
+              naytaKeli(data);
+            })
 
-                    // VIRHE
-                    .catch(function (error) {
-                        document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
-                    })
+            // VIRHE
+            .catch(function (error) {
+              document.getElementById("vastaus").innerHTML =
+                "<p>Tietoa ei pystytä hakemaan</p>";
+            });
+            //KELLON AIKA 
+            let aika = new Date().toTimeString().split(' ')[0];
 
-                // Säätiedot
-                function naytaKeli(data) {
-                    let keliBoxi = "<h3>Kaupunki:</h3>" + "<h4>" + data.name + "</h4>" + 
-                    "<h3>Sää:</h3>" + "<h4>" + data.weather[0].description + "</h4>" + 
-                    "<h3>Lämpötila:</h3>" + "<h4>" + data.main.temp + "&degC" + "</h4>" +
-                    "<h3>Tuuli:</h3>" + "<h4>" + data.wind.speed + "&nbspm/s</h4>";
+          // Säätiedot
+          function naytaKeli(data) {
+            let keliBoxi =
+              "<h3>Kaupunki:</h3>" +
+              "<h4>" +
+              data.name +
+              "</h4><h5>Sää kello " + aika +
+              "</h5>" +
+              "<h3>Sää:</h3>" +
+              "<h4>" +
+              data.weather[0].description +
+              "</h4>" +
+              "<h3>Lämpötila:</h3>" +
+              "<h4>" +
+              data.main.temp +
+              "&degC" +
+              "</h4>" +
+              "<h3>Tuuli:</h3>" +
+              "<h4>" +
+              data.wind.speed +
+              "&nbspm/s</h4>";
 
-                    // Ikonin URL
-                    let iconCode = data.weather[0].icon;
-                    let iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png `;
+            // Ikonin URL
+            let iconCode = data.weather[0].icon;
+            let iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png `;
 
-                    // Päivitetään kuvan lähde
-                    document.getElementById("weather-icon").src = iconUrl;
-                    
-                    // Päivitetään säätiedot sivulle
-                    document.getElementById("vastaus").innerHTML = keliBoxi;
-                }
-            }
-            keli()
-        </script>
+            // Päivitetään kuvan lähde
+            document.getElementById("weather-icon").src = iconUrl;
+
+            // Päivitetään säätiedot sivulle
+            document.getElementById("vastaus").innerHTML = keliBoxi;
+
+
+
+            //document.getElementById("aika").innerHTML = "Sää kello " + aika;
+          }
+        }
+        keli();
+      </script>
     </main>
-</body>
-
+  </body>
 </html>
