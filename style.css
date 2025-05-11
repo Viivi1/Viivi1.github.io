@@ -1,0 +1,86 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.header-image {
+    background-image: url("pics/värit_leikattu.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header-image h1,
+.header-image p {
+font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.custom-navbar {
+    background-color: #533b4d; 
+  }
+.custom-footer {
+    background-color: #3f3244 !important; 
+  }
+  
+/* Etusivun vasemmalla olevat jutut*/
+.keli-laatikko {
+    background-color: #ebebeb;
+    border-radius: 0.5rem;
+    padding: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+  }
+#lempparit .nav-link {
+    background-color: #ebebeb;
+    color: #333;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.6rem 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+#lempparit .nav-link:hover {
+    background-color: #d3a6a4;
+    color: #000;
+    transform: translateX(5px);
+  }
+/* kootut sivulle juttuja */
+.card-img-top {
+    height: 300px;   
+    object-fit: cover;  
+  }
+.btn-primary {
+    background-color: #f27059; 
+    border: none;
+  }
+  
+.btn-primary:hover {
+    background-color: #f25c54;
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+/* Siisti hover efekti! */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: scale(1.03); 
+  }
+
+/* Nätimpi linkki*/
+a.custom-link {
+  color: #f25c54;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a.custom-link:hover {
+  color: #533b4d;
+  text-decoration: underline;
+}
